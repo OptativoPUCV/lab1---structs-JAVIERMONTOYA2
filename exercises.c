@@ -39,7 +39,7 @@ y su tamaño, y luego devuelva un nuevo arreglo que contenga solo
 los números pares del arreglo original.
 */
 int *filterEvenNumbers(int arr[], int size, int *newSize) {
-  int numPares;
+  int numPares=0;
   for (int i=0; i<size; i++){
     if (arr[i]%2==0){
       numPares++;
@@ -64,7 +64,9 @@ ordenados y sus tamaños, y luego fusione estos dos
 arreglos en un tercer arreglo también ordenado.
 */
 void mergeSortedArrays(int arr1[], int size1, int arr2[], int size2, int result[]) {
-  int i,j,k;
+  int i=0;
+  int j=0;
+  int k=0;
 
   while(i<size1&&j<size2){
     if(arr1[i]<=arr2[j]){
