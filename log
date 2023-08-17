@@ -24,3 +24,22 @@ exercises.c:67:11: error: ‘k’ may be used uninitialized in this function [-W
 cc1: all warnings being treated as errors
 Compilation failed
 bb0e387
+Thu 17 Aug 2023 02:46:12 AM UTC: 
+In file included from test.c:1:
+exercises.c: In function ‘filterEvenNumbers’:
+exercises.c:48:12: error: ‘numPares’ may be used uninitialized [-Werror=maybe-uninitialized]
+   48 |   *newSize = numPares;
+      |   ~~~~~~~~~^~~~~~~~~~
+exercises.c: In function ‘mergeSortedArrays’:
+exercises.c:69:10: error: ‘i’ is used uninitialized [-Werror=uninitialized]
+   69 |   while(i<size1&&j<size2){
+      |         ~^~~~~~
+exercises.c:69:19: error: ‘j’ is used uninitialized [-Werror=uninitialized]
+   69 |   while(i<size1&&j<size2){
+      |                  ~^~~~~~
+exercises.c:67:11: error: ‘k’ may be used uninitialized in this function [-Werror=maybe-uninitialized]
+   67 |   int i,j,k;
+      |           ^
+cc1: all warnings being treated as errors
+Compilation failed
+e1fd512
