@@ -99,17 +99,17 @@ y luego devuelva 1 si el arreglo está ordenado en orden ascendente,
 int checkSorted(int arr[], int size) {
   int resultado = 0;
   for(int i=1;i<size;i++){
-    if(arr[i]<arr[i-1]){
-      if(resultado==1){
+    if(arr[i] < arr[i-1]){
+      if(resultado == 1){
         return 0;
       }else{
-        return -1;
+        resultado = -1;
       }
     }else if (arr[i]>arr[i-1]){
       if(resultado==-1){
         return 0;
       }else{
-        return 1;
+        resultado = 1;
       }
     }
   }
