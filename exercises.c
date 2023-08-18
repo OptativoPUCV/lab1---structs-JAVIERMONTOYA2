@@ -100,9 +100,17 @@ int checkSorted(int arr[], int size) {
   int resultado = 0;
   for(int i=1;i<size;i++){
     if(arr[i]<arr[i-i]){
-      resultado=-1;
+      if(resultado==1){
+        return 0;
+      }else{
+        return -1;
+      }
     }else if (arr[i]>arr[i-i]){
-      resultado=1;
+      if(resultado==-1){
+        return 0;
+      }else{
+        return 1;
+      }
     }
   }
   return resultado;
